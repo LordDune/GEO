@@ -1,7 +1,7 @@
 public class Person {
     private String fullName;
     private int age;  // добавлено поле возраст
-    private Gender gender;     // переделать все поля 
+    private Gender gender; 
 
     enum Gender {
         man, wooman
@@ -30,7 +30,7 @@ public class Person {
 
     }
     
-    public String getGender() {   // задать возраст
+    public String getGender() {   // возвращает пол
         if (this.gender != null){
             return this.gender.toString();
         }
