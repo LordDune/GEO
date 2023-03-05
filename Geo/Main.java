@@ -11,8 +11,8 @@ public class Main {
         gt.append(vasya, jane);
         gt.append(vasya, ivan);
 
-        System.out.println(new Reserch(gt).spend(jane,
-                Relationship.children));
-    }
 
+        System.out.println(new Reserch(gt).spend(vasya,Relationship.children));
+        System.out.println(irina);
+    }
 }
