@@ -1,45 +1,49 @@
+enum Gender {
+    Male, Female
+}
+
 public class Person {
     private String fullName;
-    private int age;  // добавлено поле возраст
+    private int age;
     private Gender gender; 
 
-    enum Gender {
-        man, wooman
-    }
-
-    public Person(String fullName, int age, String gender) {  // описать конструктор с условием по гендеру
-    }
-    
-    public Person(String fullName) {    // думаю можно оставить, только сослаться на первый конструктор, а возраст по умолчанию 0
+    public Person(String fullName, int age, String gender) {
         this.fullName = fullName;
+        this.age = age;
+        if (gender == "Male" || gender == "Female") this.gender = Gender.valueOf(gender);
+        else this.gender = null;
     }
 
     public String getFullName() {
         return fullName;
     }
 
-    public void setFullName() {   // дописать метод задать имя
-
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public int getAge() {   // возвращает возраст
+    public int getAge() {
         return this.age;
     }
 
-    public void setAge() {   // задать возраст
-
+    public void setAge(int age) {
+        this.age = age;
     }
     
-    public String getGender() {   // возвращает пол
+    public String getGender() {
         if (this.gender != null){
             return this.gender.toString();
         }
-        else return null;
-            
+        else return "пол не задан";
+    }
+
+    public void setGender(String gender) {
+        if (gender == "Male" || gender == "Female") this.gender = Gender.valueOf(gender);
+        else this.gender = null;
     }
 
     public String toString(){
-        return String.format("%s, %d, %s", getFullName(), getAge(), getGender());
+        return String.format("%s: %d %s", getFullName(), getAge(), getGender());
     }
 
 }
