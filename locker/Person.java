@@ -33,26 +33,29 @@ public class Person {
     }
 
     public void open(Closet closet) {
-        System.out.println("!!! " + name + ": попытка открыть " + closet.getName()); 
+        System.out.print(name + ": попытка открыть " + closet.getName() + " -> "); 
         System.out.println(closet.tryOpen());
     }
 
     public void close(Closet closet) {
-        System.out.println("!!! " + name + ": попытка закрыть " + closet.getName());
+        System.out.print(name + ": попытка закрыть " + closet.getName() + " -> ");
         System.out.println(closet.tryClose());
      }
 
     public void get(Closet closet, int value) {
-        System.out.println("!!! " + name + ": попытка взять вещи из " + closet.getName());
+        System.out.print(name + ": попытка взять вещи из " + closet.getName() + " -> ");
         int x = closet.tryGet(value);
         this.things += x;
         if (x != 0) System.out.printf("%s взял из %s %d вещей\n", this.name, closet.getName(), x);
      }
 
      public void put(Closet closet, int value) {
-        System.out.println("!!! " + name + ": попытка положить вещи в " + closet.getName());
-        int x = closet.tryPut(value);
-        this.things -= x;
-        if (x != 0) System.out.printf("%s положил в %s %d вещей\n", this.name, closet.getName(), x);
+        System.out.print(name + ": попытка положить вещи в " + closet.getName() + " -> ");
+        if (value > this.things) System.out.println("Недостаточно вещей");
+        else {
+            int x = closet.tryPut(value);
+            this.things -= x;
+            if (x != 0) System.out.printf("%s положил в %s %d вещей\n", this.name, closet.getName(), x);}
+        
      }
 }

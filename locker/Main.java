@@ -13,9 +13,9 @@ public class Main {
         player.put(closet, 10); // !!! Player: попытка положить вещи в Шкаф - Невозможно положить вещи. Шкаф закрыт
         System.out.println(player); //Player: 10 вещей
         System.out.println(closet); // Closet: Шкаф. Вещей: 0 из 50, состояние: Closed
-        player.intThings(50); // Player получил 50 вещей. Общее количество: 60
+        player.intThings(10); // Player получил 50 вещей. Общее количество: 60
         player.open(closet); // !!! Player: попытка открыть Шкаф - Шкаф успешно открыт
-        player.put(closet, 55); // !!! Player: попытка положить вещи в Шкаф - Шкаф: переполнен
+        player.put(closet, 35); // !!! Player: попытка положить вещи в Шкаф - Шкаф: переполнен
         System.out.println(closet); // Closet: Шкаф. Вещей: 0 из 50, состояние: Opened
         System.out.println(player); // Player: 60 вещей
     }
