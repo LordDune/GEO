@@ -1,7 +1,5 @@
 package OOP.DZ.dz1.locker;
 
-import javax.xml.transform.Source;
-
 public class Person {
     
     private String name;
