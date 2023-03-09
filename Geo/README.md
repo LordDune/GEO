@@ -17,5 +17,5 @@
         
         для дедушки / внука -               SearchRe.grandParent, SearchRe.grandСhildren
 6) Поиск по полу - выводит всех людей выбранного пола. Например: print(gt, Gender.Male)/ print(gt, Gender.Female)
-7) Поиск по возрасту - выводит всех людей от (SearchAge.ageOlder) или до (SearchAge.ageYounger) выбранного возвраста. 
+7) Поиск по возрасту - выводит всех людей от (SearchAge.ageOlder) или до (SearchAge.ageYounger) выбранного возраста. 
     Например: print(gt, SearchAge.ageOlder, 40)
