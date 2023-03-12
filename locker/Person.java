@@ -9,6 +9,7 @@ public class Person {
     public Person(String name) {
         this.name = name;
         System.out.printf("Создан персонаж: %s\n", this.getName());
+        System.out.println("_".repeat(150));
     }
 
     public Person() {

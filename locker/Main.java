@@ -18,5 +18,6 @@ public class Main {
         player.put(closet, 35); // !!! Player: попытка положить вещи в Шкаф - Шкаф: переполнен
         System.out.println(closet); // Closet: Шкаф. Вещей: 0 из 50, состояние: Opened
         System.out.println(player); // Player: 60 вещей
+        System.out.println(closet.tryOpen());
     }
 }

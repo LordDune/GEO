@@ -27,8 +27,10 @@ public class Main {
         print(gt, jane, SearchRe.grandChildren); // кому является женя внучкой
         print(gt, SearchAge.ageYounger, 40); // все люди до 40 лет
         print(gt, SearchAge.ageOlder, 40); // все люди от 40 лет
-        print(gt, Gender.Female); // все люди женского пола
         print(gt, Gender.Male); // все люди мужского пола
+        print(gt, Gender.Female); // все люди женского пола
+        
+        System.out.println(new Research(gt).spend(Gender.Female));
 
         
     }

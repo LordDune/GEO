@@ -1,4 +1,4 @@
-package OOP.DZ.dz1.PersonCat;
+package DZ.dz1.PersonCat;
 
 public enum Room {
     kitchen,
